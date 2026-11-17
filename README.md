@@ -7,9 +7,10 @@
 ## 시연
 
 <!-- 공개 시연 MP4를 GitHub 웹 편집창에서 첨부하고, 생성된 URL을 이 위치의 빈 줄에 넣으세요. -->
-**<장애물 회피>**
+**<장애물 회피 및 차선 변경>**
 
 <img width="320" height="569" alt="Video Project 3" src="https://github.com/user-attachments/assets/752ef19a-1481-45c3-886d-2b009ece0272" />
+
 
 **<정지 표지판 확인 후 잠시 정지, 빨간 정지선에서 잠깐 정차>**
 
