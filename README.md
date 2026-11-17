@@ -22,7 +22,7 @@
 
 | 담당 | 구현 내용 | 관련 코드 |
 | --- | --- | --- |
-| 주행 상태머신(FSM) | 차선 및 신호등·표지판 인식 결과를 받아 주행, 정지, 차선 변경을 결정하도록 상태 전이를 구성했습니다. | [FSM](src/control/control/fsm_node.py) · [속도 명령 발행](src/control/control/control_node.py) |
+| 주행 상태머신(FSM) | 차선 및 신호등·표지판 인식 결과를 받아 주행, 정지, 차선 변경을 결정하도록 상태 전이를 구성했습니다. 모노 카메라 기반의 거리 측정으로 물체와의 일정 거리 내에서 상태머신을 적용하였습니다. | [FSM](src/control/control/fsm_node.py) · [속도 명령 발행](src/control/control/control_node.py) |
 | ROS 2–ESP32 연동 | 차체의 선속도·각속도 명령을 차동구동 기구학으로 좌우 목표 RPM으로 변환하고, UART로 JSON 명령을 전달하는 팀 인터페이스와 주행 제어를 연동했습니다. | [UART 브리지](src/serial_bridge/serial_bridge/bridge_node.py) |
 | 바퀴 속도 제어 | 엔코더로 측정한 좌우 RPM을 이용해 각 바퀴에 PI 제어와 피드포워드를 적용했습니다. PWM과 적분항에 상한을 두고, 새 구동 명령이 끊기면 모터를 정지시키는 타임아웃을 적용했습니다. | [ESP32 펌웨어](esp32_firmware/src/main.cpp) |
 | 경로 추종 실험 | 웨이포인트를 따라가는 Pure Pursuit 노드를 구현하고, LiDAR 기반 지도·위치 추정 구성과 연동했습니다. | [경로 추종 노드](src/track_overlay/track_overlay/path_follower.py) · [위치 추정 구성](src/localization/) |
